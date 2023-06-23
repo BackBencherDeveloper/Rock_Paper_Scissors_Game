@@ -1,0 +1,30 @@
+#imort a ranndom lib for computer choice:
+import random
+#create a function for checking the winner:
+def get_choices():
+#taking input from the user:
+  player_choice = input("enter a choice (rock,paper,scissors): ")
+#create an list for computer choice:
+  options = ["rock", "paper", "scissors"]
+#use random lib for the computer choice:
+  computer_choice = random.choice(options)
+#print the choice of both computer and player:
+  print("bot choice: ", computer_choice)
+  print("your choice: ", player_choice)
+#compare the choice of the player and computer using the if statement and return it:
+  if (computer_choice == "rock" and player_choice == "paper") or (
+      computer_choice == "paper"
+      and player_choice == "scissors") or (computer_choice == "scissors"
+                                           and player_choice == "rock"):
+    return "player wins"
+  elif computer_choice == "rock" and player_choice == "rock" or computer_choice == "paper" and player_choice == "paper" or computer_choice == "scissior" and player_choice == "scissior":
+    return "draw"
+  else:
+    return "bot wins"
+
+#main
+#call the get_choices function and store the value in choices:
+choices = get_choices()
+#print the value stored in choices:
+print(choices)
+#finally game is created and now you can run this game and play
